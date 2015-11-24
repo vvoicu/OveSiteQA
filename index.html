@@ -56,7 +56,7 @@
         <div class="text-vertical-center-white">
 			<img class="img-logo" src="img/logo.png">
              <!-- <h1>Evozon</h1>-->
-            <h2>Testing Services</h2>
+            <h1><strong>Build users’ trust</strong></h1>
             <br>
             <a href="#about" class="btn btn-dark btn-lg">Find Out More</a>
         </div>
@@ -70,7 +70,14 @@
                     <h2>About Us</h2>
 					<hr class="small-black">
                     <p class="lead">With over 10 years of experience in software quality assurance, we are offering a vast testing expertise whether you need functional or non-functional testing, automated or manual testing. We are using the latest leading tools in the software testing market and we have hands-on testers ready to help you from requirements phase through acceptance testing towards successfully delivery of your software product. </p>
-                <a href="about.html" class="btn btn-dark">Learn More</a>
+                    
+                    <div id="about-show-more" class="lead" style="display:none">
+                        <p>With years of experience in software quality, our team has the knowledge, know-how and skill set required to ensure the desired outcome for your project. Whether you need manual or automated testing, our QA department has successfully handled testing projects for customers all over the world, ranging from web to mobile applications and using a broad range of tools.</p>
+                        <p>We strive to implement structured testing practices and to optimize our activities. For that reason most of our testers are ISTQB certified, resulting in better testing, better software, reduced risk and lower costs.</p>
+                        
+                    </div>
+                <!--<a href="about.html" class="btn btn-dark">Learn More</a> -->
+                    <input id="aboutLearnButton" class="btn btn-dark btn-lg" type="button" onclick="return showMore('about-show-more','aboutLearnButton')" value="Show More">
 				</div>
 				
             </div>
@@ -92,7 +99,7 @@
                         <div class="col-md-3 col-sm-6">
 						
 						<div class="flip3D">
-                            <div class="service-item ">
+                            <div class="service-item " >
                                 <span class="fa-stack fa-4x">
                                 <i class="fa fa-circle fa-stack-2x"></i>
                                 <i class="fa fa-user-md fa-stack-1x text-primary"></i>
@@ -100,13 +107,15 @@
                                 <h4>
                                     <strong>Manual Testing</strong>
                                 </h4>
-                                <p>Requirements analysis</p>
-								<p>Create and Execute Test Cases</p>
-								<p>Exploratory Testing (Ad-hoc)</p>
-								<p>Bug tracking and report results</p>
-                                <!-- <a href="#" class="btn btn-light">Learn More</a>-->
+								<div id="manualTestingThumb" style="display:block">
+									<p>Requirements analysis</p>
+									<p>Create and Execute Test Cases</p>
+									<p>Exploratory Testing (Ad-hoc)</p>
+									<p>Bug tracking and report results</p>
+								</div>
+								<input id="manualTestingButton" class="btn btn-dark btn-lg" type="button" onclick="return showMore('manualTestingDetails','manualTestingButton')" value="Show More">
+                                 <!--<a class="btn btn-light" onclick="return expandServices('manualTestingThumb','automationTestingDetails')">Learn More</a>-->
                             </div>
-							
                         </div>
                         </div>
                         <div class="col-md-3 col-sm-6">
@@ -118,10 +127,13 @@
                                 <h4>
                                     <strong>Automation Testing</strong>
                                 </h4>
-                                <p>Identify test case candidates</p>
-								<p>Develop and execute test scripts</p>
-								<p>Investigate and interpret results</p>
-								<p>Continuous integration </p>
+								<div id="automationTestingThumb" style="display:block">
+									<p>Identify test case candidates</p>
+									<p>Develop and execute test scripts</p>
+									<p>Investigate and interpret results</p>
+									<p>Continuous integration </p>
+								</div>
+								<input id="automationTestingButton" class="btn btn-dark btn-lg" type="button" onclick="return showMore('automationTestingDetails','automationTestingButton')" value="Show More">
                                 <!-- <a href="#" class="btn btn-light">Learn More</a>-->
                             </div>
                         </div>
@@ -134,10 +146,13 @@
                                 <h4>
                                     <strong>Performance Testing</strong>
                                 </h4>
-                                <p>Preliminary performance testing</p>
-                                <p>Load testing</p>
-                                <p>Volume testing</p>
-                                <p>Stress testing</p>
+								<div id="performanceTestingThumb" style="display:block">
+									<p>Preliminary performance testing</p>
+									<p>Load testing</p>
+									<p>Volume testing</p>
+									<p>Stress testing</p>
+								</div>
+								<input id="performanceTestingButton" class="btn btn-dark btn-lg" type="button" onclick="return showMore('performanceTestingDetails','performanceTestingButton')" value="Show More">
                                 <!-- <a href="#" class="btn btn-light">Learn More</a>-->
                             </div>
                         </div>
@@ -150,14 +165,53 @@
                                 <h4>
                                     <strong>Security Testing</strong>
                                 </h4>
-                                <p>Identify vulnerabilities</p>
-                                <p>Evaluate the risks</p>
-                                <p>Evaluate business impact </p>
-                                <p>Suggest fixes and prevention</p>
+								<div id="securityTestingThumb" style="display:block">
+									<p>Identify vulnerabilities</p>
+									<p>Evaluate the risks</p>
+									<p>Evaluate business impact </p>
+									<p>Suggest fixes and prevention</p>
+								</div>
+								<input id="securityTestingButton" class="btn btn-dark btn-lg" type="button" onclick="return showMore('securityTestingDetails','securityTestingButton')" value="Show More">
                                 <!-- <a href="#" class="btn btn-light">Learn More</a>-->
                             </div>
                         </div>
                     </div>
+					<div class="row lead" id="manualTestingDetails" style="display:none">
+							<h3>
+                               <strong>Manual Testing</strong>
+                            </h3>
+							<hr class="small">
+							<p>Time to be more picky with your software!</p>
+							<p>As your final goal is a timely release, creating and running automated tests will get you there faster, efficiently, and with a decrease in costs!</p>
+							<p>Automated tests can run frequently, which is cost-effective for software products with a long maintenance life. Testing in an agile environment, the ability to quickly react to ever-changing software systems and requirements will increase. New test cases will generate continuously and they will be added to existing automation in parallel to the development of the software itself.</p>
+					</div>
+					<div class="row lead" id="automationTestingDetails" style="display:none">
+							<h3>
+                               <strong>Automated Testing</strong>
+                            </h3>
+							<hr class="small">
+							<p>Time to be more picky with your software!</p>
+							<p>As your final goal is a timely release, creating and running automated tests will get you there faster, efficiently, and with a decrease in costs!</p>
+							<p>Automated tests can run frequently, which is cost-effective for software products with a long maintenance life. Testing in an agile environment, the ability to quickly react to ever-changing software systems and requirements will increase. New test cases will generate continuously and they will be added to existing automation in parallel to the development of the software itself.</p>
+					</div>
+					<div class="row lead" id="performanceTestingDetails" style="display:none">
+							<h3>
+                               <strong>Performance Testing</strong>
+                            </h3>
+							<hr class="small">
+							<p>Time to be more picky with your software!</p>
+							<p>As your final goal is a timely release, creating and running automated tests will get you there faster, efficiently, and with a decrease in costs!</p>
+							<p>Automated tests can run frequently, which is cost-effective for software products with a long maintenance life. Testing in an agile environment, the ability to quickly react to ever-changing software systems and requirements will increase. New test cases will generate continuously and they will be added to existing automation in parallel to the development of the software itself.</p>
+					</div>
+					<div class="row lead" id="securityTestingDetails" style="display:none">
+							<h3>
+                               <strong>Security Testing</strong>
+                            </h3>
+							<hr class="small">
+							<p>Time to be more picky with your software!</p>
+							<p>As your final goal is a timely release, creating and running automated tests will get you there faster, efficiently, and with a decrease in costs!</p>
+							<p>Automated tests can run frequently, which is cost-effective for software products with a long maintenance life. Testing in an agile environment, the ability to quickly react to ever-changing software systems and requirements will increase. New test cases will generate continuously and they will be added to existing automation in parallel to the development of the software itself.</p>
+					</div>
                     <!-- /.row (nested) -->
                 </div>
                 <!-- /.col-lg-10 -->
@@ -226,11 +280,26 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h3>What sets us apart ?</h3>
+                    <h2>What is testing and why your business needs it</h2>
 					<hr class="small">
-					<p class="lead">Because of a higher expectation in quality of applications and products with emphasis on reliability, high resilience, and predictability, there is an increased focus on the availability of systems, user experience and security. This is why testing plays a crucial role in software development, as it will ensure quality and performance, improve alignment between your business and IT infrastructure, increasing overall efficiency.</p>
+					<p class="lead">Testing is the process of evaluating a system or its components to find out whether it encounters the specified requirements or not. We run a large variety of tests to identify gaps, errors, or missing requirements and also to evaluate the features of the software item.</p>
+					<div  id="what-testing-show-more" class="lead" style="display:none">
+						<p>Because of the higher expectation about business assurance of applications and products with emphasis on reliability, high resilience, and predictability, there is an increased focus on the availability of systems, user experience and security.</p>
+						<p>This is why testing plays a crucial role in software development, as it will ensure quality and performance, improve alignment between your business and IT, increasing overall efficiency.</p>
+						
+						<div class="lead">
+							<hr class="small">
+							<h3>Does it do what it is supposed to do and do what it needs to do?</h3>
+							<hr class="small">
+							<p>It is commonly known that the earlier an error is found, the cheaper it is to fix it.</p>
+							<p>Start testing your product early, as the cost of fixing a mistake depends on the stage it was detected. </p>
+							<p>Yes, you can test it all at once, when you might think the work it is almost done or you can have your teams of developers and testers working at the same time, testing every increment.</p>
+						</div>
+						
+					</div>
                    <!--  <a href="#" class="btn btn-lg btn-light">Click Me!</a>-->
                    <!--  <a href="#" class="btn btn-lg btn-dark">Look at Me!</a>-->
+					<input id="awhatTestingLearnButton" class="btn btn-dark btn-lg" type="button" onclick="return showMore('what-testing-show-more','awhatTestingLearnButton')" value="Show More">
                 </div>
             </div>
         </div>
@@ -243,8 +312,6 @@
 			<div class="col-lg-10 col-lg-offset-1 text-center padder">
 				<h3>Contact Us</h3>
 				<hr class="small-black">
-				
-
 				<h4>
                     <strong>Evozon Development Center</strong>
 				</h4>
@@ -266,10 +333,10 @@
 				<br>
 				<ul class="list-inline">
 					<li>
-						<a  href="https://www.facebook.com/evozon"><i class="fa fa-facebook fa-fw fa-3x"></i></a>
+						<a  href="https://www.facebook.com/evozon" target="_blank"><i class="fa fa-facebook fa-fw fa-3x"></i></a>
 					</li>
 					<li>
-						<a href="https://twitter.com/evozon"><i class="fa fa-twitter fa-fw fa-3x"></i></a>
+						<a href="https://twitter.com/evozon" target="_blank"><i class="fa fa-twitter fa-fw fa-3x"></i></a>
 					</li>
 				</ul>
 				
@@ -338,6 +405,35 @@
         });
     });
     </script>
+
+<script type="text/javascript">
+    function showMore(a,c){
+      var e=document.getElementById(a);
+      var b=document.getElementById(c);
+      if(!e)return true;
+          if(e.style.display=="none"){
+            e.style.display="block";
+            b.value = 'Show Less';
+           } else {
+            e.style.display="none";
+            b.value ='Show More';
+      }
+      return true;
+    }
+	function expandServices(a,c){
+	  var e=document.getElementById(a);
+      var b=document.getElementById(c);
+      if(!e)return true;
+          if(e.style.display=="none"){
+            e.style.display="block";
+            b.style.display="none";
+           } else {
+            e.style.display="none";
+            b.style.display="block";
+      }
+      return true;
+	}
+</script>
 
 </body>
 
