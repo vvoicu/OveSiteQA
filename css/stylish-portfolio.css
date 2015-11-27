@@ -70,6 +70,13 @@
 
 /*FLIP 3D*/
 
+/*MAP Overlay*/
+
+.map iframe{
+    pointer-events: none;
+}
+/*MAP Overlay*/
+
 
 
 html,
@@ -79,7 +86,8 @@ body {
 }
 
 body {
-    font-family: "Source Sans Pro","Helvetica Neue",Helvetica,Arial,sans-serif;
+   /* font-family: "Source Sans Pro","Helvetica Neue",Helvetica,Arial,sans-serif; */
+	font-family:'Roboto Mono'
 }
 
 .text-vertical-center {
